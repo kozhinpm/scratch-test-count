@@ -14,7 +14,7 @@ from skimage.segmentation import mark_boundaries
 ```
 
 ```python
-ST = Scratch_test()
+ST = st.Scratch_test()
 ST.setImages('/pics')
 ST.setTargets('0d_k')
 ST.setTargetThreshold()
