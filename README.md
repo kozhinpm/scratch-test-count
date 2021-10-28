@@ -8,6 +8,7 @@ author: "Kozhin PM"
 С помощью класса scratch_test_class анализируются фотографии с клеточными культурами. Сегментируются участки с клетками и без. Вычисляются соответствующие площади.
 
 ```python
+import pandas as pd
 import matplotlib.pyplot as plt
 import czifile
 import scratch_test_class as st
@@ -26,6 +27,15 @@ ST.count_scratch_area()
 1 of 3 images
 2 of 3 images
 Done!
+```
+```python
+pd.DataFrame({'name': ST.imagenames, 'area': ST.area})
+```
+```
+        name     area
+0  3d_k_rep0   426554
+1  0d_k_rep0  3200451
+2  0d_k_rep1  3669344
 ```
 
 Сегментированные площади можно подсветить наложением маски или отобразив границы
